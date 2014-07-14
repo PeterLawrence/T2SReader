@@ -1,0 +1,47 @@
+# Microsoft Developer Studio Generated Dependency File, included by WinTextReader.mak
+
+.\dlgtxtctrl.cpp : \
+	".\dlgtxtctrl.h"\
+	"d:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\txtread.cpp : \
+	".\dlgtxtctrl.h"\
+	".\txtreader.h"\
+	".\voiceclass.h"\
+	"d:\program files\microsoft speech sdk 5.1\include\sapi.h"\
+	"d:\program files\microsoft speech sdk 5.1\include\sapiddk.h"\
+	"d:\program files\microsoft speech sdk 5.1\include\spdebug.h"\
+	"d:\program files\microsoft speech sdk 5.1\include\sperror.h"\
+	"d:\program files\microsoft speech sdk 5.1\include\sphelper.h"\
+	"d:\program files\microsoft speech sdk 5.1\include\spuihelp.h"\
+	"d:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\voiceclass.cpp : \
+	".\voiceclass.h"\
+	"d:\program files\microsoft speech sdk 5.1\include\sapi.h"\
+	"d:\program files\microsoft speech sdk 5.1\include\sapiddk.h"\
+	"d:\program files\microsoft speech sdk 5.1\include\spdebug.h"\
+	"d:\program files\microsoft speech sdk 5.1\include\sperror.h"\
+	"d:\program files\microsoft speech sdk 5.1\include\sphelper.h"\
+	"d:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\WinTextReader.cpp : \
+	".\dlgtxtctrl.h"\
+	".\txtreader.h"\
+	".\voiceclass.h"\
+	"d:\program files\microsoft speech sdk 5.1\include\sapi.h"\
+	"d:\program files\microsoft speech sdk 5.1\include\sapiddk.h"\
+	"d:\program files\microsoft speech sdk 5.1\include\spdebug.h"\
+	"d:\program files\microsoft speech sdk 5.1\include\sperror.h"\
+	"d:\program files\microsoft speech sdk 5.1\include\sphelper.h"\
+	"d:\program files\microsoft speech sdk 5.1\include\spuihelp.h"\
+	"d:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\WinTextReader.rc : \
+	".\small.ico"\
+	".\WinTextReader.ico"\
+	

@@ -1,0 +1,247 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_WINTEXTREADERS      ICON    DISCARDABLE     "WinTextReader.ICO"
+IDI_SMALL               ICON    DISCARDABLE     "SMALL.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDM_CONTEXTMAIN MENU DISCARDABLE 
+BEGIN
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "T&2SReader Console",          IDD_SHOW
+        MENUITEM SEPARATOR
+        MENUITEM "&Repeat",                     IDD_REPEAT
+        MENUITEM "&Halt",                       IDD_Halt
+        MENUITEM "Clear &History",              IDD_ClearHistory
+        MENUITEM "&Keep Text",                  IDD_KeepText, CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "Reset Voice (Start &up)",     IDD_RESETVOICEINIT
+        MENUITEM "&Reset Voice (S&ystem)",      IDD_RESETVOICESYS
+        MENUITEM "&Test",                       IDD_TEST
+        MENUITEM SEPARATOR
+        MENUITEM "H&otkey",                     IDD_HOTKEY
+        MENUITEM "&About",                      IDD_ABOUTBOX
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  22, 17, 230, 83
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION
+CAPTION "About WinTextReader"
+FONT 8, "System"
+BEGIN
+    ICON            IDI_WINTEXTREADERS,IDC_MYICON,14,9,20,20
+    LTEXT           "T2SReader : Freeware version 0.1.4 Beta",IDC_STATIC,34,
+                    7,154,8
+    LTEXT           "Author:  P.J.Lawrence",IDC_STATIC,34,17,151,8
+    DEFPUSHBUTTON   "OK",IDOK,195,6,30,11,WS_GROUP
+    LTEXT           "email P.J.Lawrence@gre.ac.uk",IDC_STATIC,34,28,164,8
+    LTEXT           "This software is provided ""as is"" , without any guarantee made as to its suitability or fitness for any particular use.",
+                    IDC_STATIC,34,40,190,19
+    LTEXT           "The Author takes no responsibility for any damage that may unintentionally be caused through its use.",
+                    IDC_STATIC,34,60,184,22
+END
+
+IDD_VOICEDIALOG DIALOG DISCARDABLE  0, 0, 300, 215
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+CAPTION "T2SReader"
+MENU IDM_CONTEXTMAIN
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDE_EDITBOX,7,7,286,112,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | WS_VSCROLL
+    RTEXT           "Voice :",IDC_TXTVOICE,7,126,40,12
+    COMBOBOX        IDC_COMBO_VOICES,83,125,210,67,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "Rate :",IDC_TXTRATE,7,143,40,12
+    CONTROL         "Slider1",IDC_RATE_SLIDER,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,77,141,216,12
+    RTEXT           "Volume :",IDC_TXTVOLUME,7,161,40,12
+    CONTROL         "Slider1",IDC_VOLUME_SLIDER,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,78,160,215,13
+    RTEXT           "Format :",IDC_TXTFORMAT,7,177,40,12
+    COMBOBOX        IDC_COMBO_OUTPUT,82,177,211,77,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "Halt",IDSTOP,7,194,52,14
+    PUSHBUTTON      "Exit",IDSHUTDOWN,182,194,53,14
+    DEFPUSHBUTTON   "Close",IDCLOSE,239,194,54,14
+    PUSHBUTTON      "Repeat",IDD_REPEAT,64,194,53,14
+    PUSHBUTTON      "Clear",IDD_ClearHistory,123,194,53,14
+END
+
+IDD_HOTKEYDIALOG DIALOGEX 0, 0, 205, 87
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "T2SReader Hotkey Setup"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    RTEXT           "The Hotkey is :",IDC_STATIC,8,35,60,10
+    CTEXT           "Here you can set the application's capture key.",
+                    IDC_STATIC,7,14,191,11
+    COMBOBOX        IDC_COMBMODKEY,71,33,74,70,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP,WS_EX_RIGHT
+    CTEXT           "+",IDC_STATIC,150,35,8,10
+    COMBOBOX        IDC_COMBHOTKEY,164,33,34,70,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,7,66,62,14
+    PUSHBUTTON      "Cancel",IDCANCEL,73,66,62,14
+    DEFPUSHBUTTON   "Apply",IDAPPLY,138,66,61,14
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_VOICEDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 208
+    END
+
+    IDD_HOTKEYDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 198
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 80
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "University of Greenwich\0"
+            VALUE "FileDescription", "T2SReader\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "T2SReader\0"
+            VALUE "LegalCopyright", "Copyright © 2007\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "T2SReader.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "University of Greenwich T2SReader\0"
+            VALUE "ProductVersion", "0, 1, 3, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x809, 1200
+    END
+END
+
+#endif    // !_MAC
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
